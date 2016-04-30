@@ -4,7 +4,7 @@
 #
 Name     : SDL_ttf
 Version  : 2.0.11
-Release  : 2
+Release  : 3
 URL      : https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
 Source0  : https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
 Summary  : Simple DirectMedia Layer - Sample TrueType Font Library
