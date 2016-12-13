@@ -4,7 +4,7 @@
 #
 Name     : SDL_ttf
 Version  : 2.0.11
-Release  : 5
+Release  : 6
 URL      : https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
 Source0  : https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
 Summary  : Simple DirectMedia Layer - Sample TrueType Font Library
@@ -21,9 +21,10 @@ BuildRequires : glibc-libc32
 BuildRequires : mesa-dev
 BuildRequires : mesa-dev32
 BuildRequires : pkgconfig(32freetype2)
+BuildRequires : pkgconfig(32ice)
+BuildRequires : pkgconfig(32x11)
 BuildRequires : pkgconfig(freetype2)
 BuildRequires : pkgconfig(ice)
-BuildRequires : pkgconfig(x11)
 
 %description
 This library allows you to use TrueType fonts to render text in SDL
