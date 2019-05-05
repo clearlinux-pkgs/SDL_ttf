@@ -4,10 +4,10 @@
 #
 Name     : SDL_ttf
 Version  : 2.0.11
-Release  : 12
+Release  : 13
 URL      : https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
 Source0  : https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
-Summary  : Simple DirectMedia Layer - Sample TrueType Font Library
+Summary  : A library that allows you to use TrueType fonts in your SDL applications
 Group    : Development/Tools
 License  : FTL Zlib
 Requires: SDL_ttf-lib = %{version}-%{release}
@@ -34,6 +34,7 @@ Summary: dev components for the SDL_ttf package.
 Group: Development
 Requires: SDL_ttf-lib = %{version}-%{release}
 Provides: SDL_ttf-devel = %{version}-%{release}
+Requires: SDL_ttf = %{version}-%{release}
 
 %description dev
 dev components for the SDL_ttf package.
@@ -86,7 +87,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546435352
+export SOURCE_DATE_EPOCH=1557077238
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -109,7 +117,7 @@ cd ../build32;
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1546435352
+export SOURCE_DATE_EPOCH=1557077238
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/SDL_ttf
 cp COPYING %{buildroot}/usr/share/package-licenses/SDL_ttf/COPYING
