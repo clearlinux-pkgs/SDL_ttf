@@ -1,2 +1,7 @@
+Configure miss: windres
+Configure miss: linux-gnu-windres
 Configure miss: OpenGL support
+Configure miss: windres
+Configure miss: i686-generic-linux-gnu-windres
+Configure miss: linux-gnu-windres
 Configure miss: OpenGL support
