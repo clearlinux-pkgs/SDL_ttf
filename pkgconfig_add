@@ -1,6 +1,3 @@
 # This file contains additional pkgconfig build requirements that did
 # not get picked up automatically. One name per line, no whitespace.
 freetype2
-32freetype2
-32x11
-32ice
